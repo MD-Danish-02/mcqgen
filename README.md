@@ -13,28 +13,28 @@ An AI-powered application that generates multiple-choice questions (MCQs) from P
 ## 💡 About the Project
 
 This project converts raw text into structured MCQs using AI.
-It supports file uploads, difficulty selection, and generates downloadable quizzes.
+Users can upload PDF or text files and instantly generate quiz questions with answers and evaluation.
 
 ---
 
 ## ✨ Features
 
 * 📄 Upload PDF or TXT files
-* 🤖 AI-generated MCQs
-* 🎯 Difficulty levels (Simple, Medium, Hard)
-* 📊 Tabular output
-* 📥 CSV download
-* 🧠 AI-based evaluation
+* 🤖 AI-generated MCQs with answers
+* 🎯 Adjustable difficulty (Simple, Medium, Hard)
+* 📊 Structured table output
+* 📥 Download MCQs as CSV
+* 🧠 AI-based quiz evaluation & analysis
+* ⚡ Fast and user-friendly interface
 
 ---
 
 ## 🛠️ Tech Stack
 
-* Python
-* Streamlit
-* LangChain
-* OpenAI API
-* Pandas
+* **Frontend:** Streamlit
+* **Backend:** Python
+* **LLM Integration:** OpenAI + LangChain
+* **Libraries:** Pandas, PyPDF2, Python-dotenv
 
 ---
 
@@ -43,7 +43,7 @@ It supports file uploads, difficulty selection, and generates downloadable quizz
 ```bash
 mcqgen/
 │
-├── streamlit_app.py          # Main app (entry point)
+├── streamlit_app.py          # Main application (entry point)
 ├── Response.json             # Output format template
 ├── requirements.txt
 ├── setup.py
@@ -58,7 +58,7 @@ mcqgen/
 │       └── __init__.py
 │
 ├── logs/                     # Logging files
-├── experiment/               # Experimental code
+├── experiment/               # Experimental/learning code
 └── mcqgenerator.egg-info/
 ```
 
@@ -67,25 +67,34 @@ mcqgen/
 ## ⚠️ Important Note
 
 👉 The **production-ready version** is deployed on Hugging Face
-👉 Some folders like `experiment/` and `logs/` are for learning and testing purposes
+👉 Some folders (`experiment/`, `logs/`) are included for learning and testing purposes
 
 ---
 
-## ⚙️ Run Locally
+## ⚙️ Setup & Installation
+
+### 1. Clone the repository
 
 ```bash
 git clone https://github.com/your-username/mcqgen.git
 cd mcqgen
+```
+
+### 2. Install dependencies
+
+```bash
 pip install -r requirements.txt
 ```
 
-Create `.env` file:
+### 3. Add API Key
+
+Create a `.env` file:
 
 ```bash
 OPENAI_API_KEY=your_api_key_here
 ```
 
-Run:
+### 4. Run the application
 
 ```bash
 streamlit run streamlit_app.py
@@ -95,37 +104,54 @@ streamlit run streamlit_app.py
 
 ## 🌐 Deployment
 
-Deployed on Hugging Face Spaces (Docker + Streamlit)
+This project is deployed using **Hugging Face Spaces (Docker + Streamlit)**
 
 👉 Live App:
 https://mddanishgenai01-mcqgen-ai.hf.space
 
 ---
 
+## 📌 Use Cases
+
+* 📚 Students for practice quizzes
+* 👨‍🏫 Teachers for test creation
+* 📖 Content creators
+* 🎯 Interview preparation
+
+---
+
 ## 📌 Learnings
 
+* Building LLM-powered applications
+* Working with LangChain & OpenAI APIs
 * Handling file uploads in Streamlit
-* Integrating LLMs using LangChain
-* Debugging Docker & deployment issues
-* Managing project structure for production
+* Debugging deployment issues (Docker & Hugging Face)
+* Structuring real-world AI projects
 
 ---
 
 ## 🔮 Future Improvements
 
-* UI enhancement
 * Multi-language support
+* Better UI/UX
 * Authentication system
-* Better evaluation logic
+* PDF export for quizzes
+* Advanced evaluation metrics
 
 ---
 
 ## 👨‍💻 Author
 
-**Mohammad Daanish**
+**Md Danish Alam**
+
+---
+
+## 📜 License
+
+This project is licensed under the MIT License – see the [LICENSE](LICENSE) file for details.
 
 ---
 
 ## ⭐ Support
 
-If you found this useful, give it a ⭐ on GitHub!
+If you like this project, give it a ⭐ on GitHub!
